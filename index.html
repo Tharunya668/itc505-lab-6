@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js"></script>
+
+    <title>Holy Grail Layout Lab6</title>
+    <style>
+        body {
+            display: grid;
+            grid-template-columns: 1fr minmax(auto, 1300px) 1fr;
+            grid-template-rows: auto 1fr auto;
+            min-height: 100vh;
+            margin: 0;
+            gap: 10px;
+        }
+
+        header {
+            grid-column: span 2;
+            text-align: center;
+            padding: 10px;
+            background-color: pink;
+            color: yellow;
+        }
+        footer {
+            grid-column: span 4;
+            background-color: lavender;
+        }
+
+        nav {
+            grid-row: 2;
+            background-color: purple;
+            grid-column: span 3;
+            padding: 10px;
+        }
+
+        nav ul {
+            list-style-type: none; 
+            padding: 0;
+            margin: 0;
+        }
+
+        nav li {
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+        main {
+            grid-column: 2;
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 20px;
+        }
+
+        section {
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        section.advertisement img {
+            width: 100%;
+            height: auto;
+            cursor: pointer;
+        }
+
+        footer {
+            grid-row: 6;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Do Something!: Holy Grail Layout</h1>
+    </header>
+
+    <nav>
+        
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+        
+    </nav>
+    
+    <main>
+        <section>
+            <h2>Holy Grail Layout</h2>           
+            <main class="content-area">
+        
+        <button onclick="generateRandomNumber()">Generate Random Number</button>
+        <p id="random-number"></p>
+    </main> </section>
+
+        <section class="advertisement">
+            <a href="https://www.amazon.com/dp/B0CHWRXH8B?psc=1&ref=ppx_yo2ov_dt_b_product_details" target="_blank">
+                <img src="airpods.jpg" width="50" height="50" alt="Advertisement">
+            </a>
+        </section>
+    </main>
+
+    <footer>
+        <p>Addendum:</p>
+        <p>For this project, I chose to create a simple interactive JavaScript application that calculates and displays Fibonacci numbers. The goal was to implement a user-friendly interface in the Holy Grail layout, allowing users to input the desired length of the Fibonacci sequence and view the result dynamically.The HTML page follows the Holy Grail layout using CSS grid. It includes a header, menu side-bar, main content area for the Fibonacci application, an advertisement linking to an Amazon product, and a footer for this addendum.One challenge was handling user input validation to ensure a positive integer for the sequence length. This was addressed by implementing checks and providing user-friendly error messages.The project provided insights into the importance of user input validation for a smoother user experience.In conclusion, the "Do Something!" project allowed for hands-on experience in combining HTML, CSS, and JavaScript to create an interactive webpage. The Fibonacci application served as a practical example to reinforce the concepts learned in class, highlighting the significance of well-structured code and user-centric design.</p>
+    </footer>
+</body>
+</html>
